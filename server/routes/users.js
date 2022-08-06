@@ -9,7 +9,17 @@ const router = express.Router();
 router.get("/me", [auth], async (req, res) => {
   const user = await User.findById(req.user._id);
   if (!user) return res.status(404).send("User not found.");
-  res.send(_.pick(user, ["_id", "name", "email"]));
+  res.send(
+    _.pick(user, [
+      "_id",
+      "name",
+      "email",
+      "bloodPressure",
+      "bloodSugar",
+      "heartRate",
+      "fitness",
+    ])
+  );
 });
 
 router.post("/", validator(validate), async (req, res) => {
