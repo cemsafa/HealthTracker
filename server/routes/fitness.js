@@ -16,6 +16,7 @@ router.post("/", [auth, validator(validate)], async (req, res) => {
     heigth: req.body.heigth,
     stamina: req.body.stamina,
     strength: req.body.strength,
+    userId: user._id,
   });
 
   try {

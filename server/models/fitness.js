@@ -31,6 +31,11 @@ const fitnessSchema = new mongoose.Schema({
     default: Date.now(),
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "user",
+  },
 });
 
 const Fitness = mongoose.model("Fitness", fitnessSchema);

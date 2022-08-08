@@ -12,6 +12,7 @@ router.post("/", [auth, validator(validate)], async (req, res) => {
 
   const heartRate = new HeartRate({
     bpm: req.body.bpm,
+    userId: user._id,
   });
 
   try {

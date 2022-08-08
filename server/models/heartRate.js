@@ -11,6 +11,11 @@ const heartRateSchema = new mongoose.Schema({
     default: Date.now(),
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "user",
+  },
 });
 
 const HeartRate = mongoose.model("HeartRate", heartRateSchema);

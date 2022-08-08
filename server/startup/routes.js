@@ -7,6 +7,7 @@ const bloodPressure = require("../routes/bloodPressure");
 const bloodSugar = require("../routes/bloodSugar");
 const heartRate = require("../routes/heartRate");
 const fitness = require("../routes/fitness");
+const familyMember = require("../routes/familyMember");
 
 module.exports = function (app) {
   app.use(cors());
@@ -17,5 +18,6 @@ module.exports = function (app) {
   app.use("/api/bloodSugar", bloodSugar);
   app.use("/api/heartRate", heartRate);
   app.use("/api/fitness", fitness);
+  app.use("/api/familyMember", familyMember);
   app.use(error);
 };

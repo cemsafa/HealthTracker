@@ -11,6 +11,11 @@ const bloodSugarSchema = new mongoose.Schema({
     default: Date.now(),
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "user",
+  },
 });
 
 const BloodSugar = mongoose.model("BloodSugar", bloodSugarSchema);

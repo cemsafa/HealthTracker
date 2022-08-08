@@ -7,19 +7,9 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/me", [auth], async (req, res) => {
-  const user = await User.findById(req.user._id);
+  const user = await User.findById(req.user._id).select("-password");
   if (!user) return res.status(404).send("User not found.");
-  res.send(
-    _.pick(user, [
-      "_id",
-      "name",
-      "email",
-      "bloodPressure",
-      "bloodSugar",
-      "heartRate",
-      "fitness",
-    ])
-  );
+  res.send(user);
 });
 
 router.post("/", validator(validate), async (req, res) => {
@@ -34,7 +24,7 @@ router.post("/", validator(validate), async (req, res) => {
   const token = generateAuthToken(user);
   res
     .setHeader("Authorization", "Bearer " + token)
-    .send(_.pick(user, ["_id", "name", "email"]));
+    .send(_.pick(user, ["_id", "name", "email", "isTrial", "isPremium"]));
 });
 
 module.exports = router;

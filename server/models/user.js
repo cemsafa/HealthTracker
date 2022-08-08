@@ -23,9 +23,18 @@ const userSchema = new mongoose.Schema({
     minlength: 8,
     maxlength: 1024,
   },
-  isAdmin: {
+  isTrial: {
     type: Boolean,
-    default: false,
+    default: true,
+  },
+  isPremium: {
+    type: Boolean,
+    default: true,
+  },
+  premiumExpire: {
+    type: Date,
+    default: Date.now(),
+    expires: 2629743,
   },
   bloodPressure: [
     {
@@ -83,6 +92,22 @@ const userSchema = new mongoose.Schema({
           enum: ["high", "medium", "low"],
           default: "medium",
           required: true,
+        },
+      }),
+    },
+  ],
+  familyMember: [
+    {
+      type: new mongoose.Schema({
+        userId: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: true,
+          ref: "self",
+        },
+        memberId: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: true,
+          ref: "user",
         },
       }),
     },

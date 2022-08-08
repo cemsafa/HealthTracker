@@ -12,6 +12,7 @@ router.post("/", [auth, validator(validate)], async (req, res) => {
 
   const bloodSugar = new BloodSugar({
     glucose: req.body.glucose,
+    userId: user._id,
   });
 
   try {

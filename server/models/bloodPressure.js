@@ -15,6 +15,11 @@ const bloodPressureSchema = new mongoose.Schema({
     default: Date.now(),
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "user",
+  },
 });
 
 const BloodPressure = mongoose.model("BloodPressure", bloodPressureSchema);
