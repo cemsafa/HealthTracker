@@ -1,12 +1,30 @@
-const { FamilyMember, validate } = require("../models/familyMember");
+const { FamilyMember, validate, lookup } = require("../models/familyMember");
 const { User } = require("../models/user");
 const auth = require("../middleware/auth");
 const validator = require("../middleware/validate");
+const validateObjectId = require("../middleware/validateObjectId");
 const Fawn = require("fawn");
 const express = require("express");
 const router = express.Router();
 
+router.get("/", auth, async (req, res) => {
+  const familymembers = await FamilyMember.find().sort("createdAt");
+  res.send(familymembers);
+});
+
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
+  const familymember = await FamilyMember.findById(req.params.id);
+  if (!familymember)
+    return res
+      .status(404)
+      .send("The family member with given id was not found.");
+  res.send(familymember);
+});
+
 router.post("/", [auth, validator(validate)], async (req, res) => {
+  const fMember = await lookup(req.body.userId, req.body.memberId);
+  if (fMember) return res.status(404).send("You already have this member.");
+
   const member = await User.findById(req.body.memberId);
   if (!member) return res.status(400).send("Invalid member.");
 
@@ -25,16 +43,16 @@ router.post("/", [auth, validator(validate)], async (req, res) => {
 
   try {
     new Fawn.Task()
-      .save("familyMember", familyMember)
+      .save("familymembers", familyMember)
       .update(
         "users",
         { _id: user._id },
-        { $push: { familyMember: familyMember } }
+        { $push: { familymembers: familyMember } }
       )
       .update(
         "users",
         { _id: member._id },
-        { $push: { familyMember: otherUserMember } }
+        { $push: { familymembers: otherUserMember } }
       )
       .run();
 

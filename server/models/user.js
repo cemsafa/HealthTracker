@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
     default: Date.now(),
     expires: 2629743,
   },
-  bloodPressure: [
+  bloodpressures: [
     {
       type: new mongoose.Schema({
         systolic: {
@@ -50,7 +50,7 @@ const userSchema = new mongoose.Schema({
       }),
     },
   ],
-  bloodSugar: [
+  bloodsugars: [
     {
       type: new mongoose.Schema({
         glucose: {
@@ -60,7 +60,7 @@ const userSchema = new mongoose.Schema({
       }),
     },
   ],
-  heartRate: [
+  heartrates: [
     {
       type: new mongoose.Schema({
         bpm: {
@@ -70,7 +70,7 @@ const userSchema = new mongoose.Schema({
       }),
     },
   ],
-  fitness: [
+  fitnesses: [
     {
       type: new mongoose.Schema({
         weigth: {
@@ -96,7 +96,7 @@ const userSchema = new mongoose.Schema({
       }),
     },
   ],
-  familyMember: [
+  familymembers: [
     {
       type: new mongoose.Schema({
         userId: {

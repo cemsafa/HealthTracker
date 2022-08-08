@@ -14,6 +14,13 @@ const familyMemberSchema = new mongoose.Schema({
   },
 });
 
+function lookup(userId, memberId) {
+  return FamilyMember.findOne({
+    "user._id": userId,
+    "member._id": memberId,
+  });
+}
+
 const FamilyMember = mongoose.model("FamilyMember", familyMemberSchema);
 
 function validateFamilyMember(familyMember) {
@@ -27,3 +34,4 @@ function validateFamilyMember(familyMember) {
 exports.FamilyMember = FamilyMember;
 exports.familyMemberSchema = familyMemberSchema;
 exports.validate = validateFamilyMember;
+exports.lookup = lookup;
