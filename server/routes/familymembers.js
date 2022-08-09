@@ -1,6 +1,7 @@
 const { FamilyMember, validate, lookup } = require("../models/familyMember");
 const { User } = require("../models/user");
 const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const trial = require("../middleware/trial");
 const premium = require("../middleware/premium");
 const validator = require("../middleware/validate");
@@ -40,7 +41,7 @@ router.post(
     const user = await User.findById(req.body.userId);
     if (!user) return res.status(400).send("Invalid user.");
 
-    const familyMember = new FamilyMember({
+    const familymember = new FamilyMember({
       memberId: member._id,
       userId: user._id,
     });
@@ -52,11 +53,11 @@ router.post(
 
     try {
       new Fawn.Task()
-        .save("familymembers", familyMember)
+        .save("familymembers", familymember)
         .update(
           "users",
           { _id: user._id },
-          { $push: { familymembers: familyMember } }
+          { $push: { familymembers: familymember } }
         )
         .update(
           "users",
@@ -65,11 +66,21 @@ router.post(
         )
         .run();
 
-      res.send(familyMember);
+      res.send(familymember);
     } catch (ex) {
       res.status(500).send("Something failed.");
     }
   }
 );
+
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
+  const familymember = await FamilyMember.findByIdAndRemove(req.params.id);
+  if (!familymember)
+    return res
+      .status(404)
+      .send("The family member with given id was not found.");
+
+  res.send(familymember);
+});
 
 module.exports = router;

@@ -34,26 +34,34 @@ router.post(
     const user = await User.findById(req.body.userId);
     if (!user) return res.status(400).send("Invalid user.");
 
-    const heartRate = new HeartRate({
+    const heartrate = new HeartRate({
       bpm: req.body.bpm,
       userId: user._id,
     });
 
     try {
       new Fawn.Task()
-        .save("heartrates", heartRate)
+        .save("heartrates", heartrate)
         .update(
           "users",
           { _id: user._id },
-          { $push: { heartrates: heartRate } }
+          { $push: { heartrates: heartrate } }
         )
         .run();
 
-      res.send(heartRate);
+      res.send(heartrate);
     } catch (ex) {
       res.status(500).send("Something failed.");
     }
   }
 );
+
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
+  const heartrate = await HeartRate.findByIdAndRemove(req.params.id);
+  if (!heartrate)
+    return res.status(404).send("The heart rate with given id was not found.");
+
+  res.send(heartrate);
+});
 
 module.exports = router;
