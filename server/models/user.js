@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     minlength: 8,
     maxlength: 1024,
   },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
   isTrial: {
     type: Boolean,
     default: true,
@@ -126,7 +130,16 @@ function validateUser(user) {
 }
 
 function generateAuthToken(user) {
-  return jwt.sign({ _id: user._id, email: user.email }, "jwtPrivateKey");
+  return jwt.sign(
+    {
+      _id: user._id,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      isTrial: user.isTrial,
+      isPremium: user.isPremium,
+    },
+    "jwtPrivateKey"
+  );
 }
 
 exports.User = User;

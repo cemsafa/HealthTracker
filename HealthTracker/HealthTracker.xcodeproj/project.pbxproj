@@ -14,6 +14,7 @@
 		B14D13A2289D9B5400ED5CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A0289D9B5400ED5CFF /* Main.storyboard */; };
 		B14D13A4289D9B5800ED5CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A3289D9B5800ED5CFF /* Assets.xcassets */; };
 		B14D13A7289D9B5800ED5CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A5289D9B5800ED5CFF /* LaunchScreen.storyboard */; };
+		B156E33B28A324EF0069777E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B156E33A28A324EF0069777E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B14D13A3289D9B5800ED5CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B14D13A6289D9B5800ED5CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14D13A8289D9B5800ED5CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B156E33A28A324EF0069777E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.debug.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */,
 				91BFC38FF90553DB5CA8F5CC /* Pods-HealthTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +81,7 @@
 				B14D13B0289D9B9B00ED5CFF /* Controllers */,
 				B14D13B1289D9BAE00ED5CFF /* Supporting Files */,
 				B14D13A8289D9B5800ED5CFF /* Info.plist */,
+				B156E33A28A324EF0069777E /* GoogleService-Info.plist */,
 			);
 			path = HealthTracker;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B14D13A7289D9B5800ED5CFF /* LaunchScreen.storyboard in Resources */,
+				B156E33B28A324EF0069777E /* GoogleService-Info.plist in Resources */,
 				B14D13A4289D9B5800ED5CFF /* Assets.xcassets in Resources */,
 				B14D13A2289D9B5400ED5CFF /* Main.storyboard in Resources */,
 			);

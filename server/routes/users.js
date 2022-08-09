@@ -1,13 +1,24 @@
 const { User, validate, generateAuthToken } = require("../models/user");
 const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const validator = require("../middleware/validate");
 const bcrypt = require("bcrypt");
 const _ = require("lodash");
 const express = require("express");
 const router = express.Router();
 
+router.get("/", [auth], async (req, res) => {
+  const users = await User.find()
+    .sort("name")
+    .select("-password")
+    .select("-isAdmin");
+  res.send(users);
+});
+
 router.get("/me", [auth], async (req, res) => {
-  const user = await User.findById(req.user._id).select("-password");
+  const user = await User.findById(req.user._id)
+    .select("-password")
+    .select("-isAdmin");
   if (!user) return res.status(404).send("User not found.");
   res.send(user);
 });
@@ -25,6 +36,14 @@ router.post("/", validator(validate), async (req, res) => {
   res
     .setHeader("Authorization", "Bearer " + token)
     .send(_.pick(user, ["_id", "name", "email", "isTrial", "isPremium"]));
+});
+
+router.delete("/:id", [auth, admin], async (req, res) => {
+  let user = await User.findByIdAndDelete(req.params.id);
+  if (!user)
+    return res.status(404).send("The user with given id was not found.");
+
+  res.send(user);
 });
 
 module.exports = router;

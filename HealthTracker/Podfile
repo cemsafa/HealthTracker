@@ -7,5 +7,6 @@ target 'HealthTracker' do
 
   # Pods for HealthTracker
   pod 'Moya'
+  pod 'FirebaseFirestore'
 
 end
