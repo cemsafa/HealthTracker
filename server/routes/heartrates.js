@@ -1,6 +1,7 @@
 const { HeartRate, validate } = require("../models/heartRate");
 const { User } = require("../models/user");
 const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const trial = require("../middleware/trial");
 const premium = require("../middleware/premium");
 const validator = require("../middleware/validate");
