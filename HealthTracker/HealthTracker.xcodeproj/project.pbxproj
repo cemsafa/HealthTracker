@@ -23,6 +23,7 @@
 		B1521DF728A330E800C386E1 /* BloodSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DF628A330E800C386E1 /* BloodSugar.swift */; };
 		B1521DF928A3312D00C386E1 /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DF828A3312D00C386E1 /* HeartRate.swift */; };
 		B1521DFB28A3317400C386E1 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DFA28A3317400C386E1 /* FamilyMember.swift */; };
+		B1521DFD28A436E900C386E1 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */; };
 		B156E33B28A324EF0069777E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B156E33A28A324EF0069777E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		B1521DF628A330E800C386E1 /* BloodSugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugar.swift; sourceTree = "<group>"; };
 		B1521DF828A3312D00C386E1 /* HeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
 		B1521DFA28A3317400C386E1 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
+		B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		B156E33A28A324EF0069777E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.debug.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B14D139E289D9B5400ED5CFF /* ViewController.swift */,
+				B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1521DEF28A32BE100C386E1 /* UserData.swift in Sources */,
+				B1521DFD28A436E900C386E1 /* LaunchScreenVC.swift in Sources */,
 				B1521DF728A330E800C386E1 /* BloodSugar.swift in Sources */,
 				B14D139F289D9B5400ED5CFF /* ViewController.swift in Sources */,
 				B14D139B289D9B5400ED5CFF /* AppDelegate.swift in Sources */,

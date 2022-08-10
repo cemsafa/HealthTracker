@@ -34,3 +34,17 @@ class User: Mappable, Codable {
         familymembers <- map["familymembers"]
     }
 }
+
+class AuthResponse: Mappable, Codable {
+    var user: User?
+    var token: String?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        user <- map["user"]
+        token <- map["token"]
+    }
+}

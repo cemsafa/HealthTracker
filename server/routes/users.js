@@ -35,7 +35,7 @@ router.post("/", validator(validate), async (req, res) => {
   const token = generateAuthToken(user);
   res
     .setHeader("Authorization", "Bearer " + token)
-    .send(_.pick(user, ["_id", "name", "email", "isTrial", "isPremium"]));
+    .send({ user: _.pick(user, ["_id", "name", "email"]), token: token });
 });
 
 router.delete("/:id", [auth, admin], async (req, res) => {
