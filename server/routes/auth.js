@@ -17,7 +17,7 @@ router.post("/", validator(validate), async (req, res) => {
 
   res
     .setHeader("Authorization", "Bearer " + token)
-    .send(_.pick(user, ["_id", "name", "email"]));
+    .send({ user: _.pick(user, ["_id", "name", "email"]), token: token });
 });
 
 function validate(req) {
