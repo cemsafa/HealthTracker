@@ -1,5 +1,5 @@
 //
-//  SignupVC.swift
+//  SigninVC.swift
 //  HealthTracker
 //
 //  Created by Cem Safa on 2022-08-10.
@@ -9,32 +9,31 @@ import UIKit
 import ObjectMapper
 import Moya
 
-class SignupVC: UIViewController {
-    
-    @IBOutlet weak var nameTF: UITextField!
+class SigninVC: UIViewController {
+
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var lblToSignin: UILabel!
+    @IBOutlet weak var lblToSignup: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(SignupVC.tapFunction))
-        lblToSignin.isUserInteractionEnabled = true
-        lblToSignin.addGestureRecognizer(tap)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SigninVC.tapFunction))
+        lblToSignup.isUserInteractionEnabled = true
+        lblToSignup.addGestureRecognizer(tap)
     }
     
     @IBAction func tapFunction(sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-        let signinVC = storyboard.instantiateViewController(withIdentifier: "SigninVC") as! SigninVC
-        signinVC.modalTransitionStyle = .crossDissolve
-        signinVC.modalPresentationStyle = .fullScreen
-        self.present(signinVC, animated: true, completion: nil)
+        let signupVC = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+        signupVC.modalTransitionStyle = .crossDissolve
+        signupVC.modalPresentationStyle = .fullScreen
+        self.present(signupVC, animated: true, completion: nil)
     }
     
-    @IBAction func signupBtnTapped(_ sender: UIButton) {
-        guard let name = nameTF.text, let email = emailTF.text, let password = passwordTF.text else { return }
-        APIManager.providerNoLog.request(.signup(name: name, email: email, password: password)) { result in
+    @IBAction func signinBtnTapped(_ sender: UIButton) {
+        guard let email = emailTF.text, let password = passwordTF.text else { return }
+        APIManager.providerNoLog.request(.login(email: email, password: password)) { result in
             switch result {
             case .success(let response):
                 if let json = try? response.mapJSON(), let authResponse = Mapper<AuthResponse>().map(JSON: json as! [String: Any]), let token = authResponse.token {
@@ -64,6 +63,7 @@ class SignupVC: UIViewController {
                 if let json = try? response.mapJSON(), let err = Mapper<ErrorResponse>().map(JSON: json as! [String: Any]) {
                     Alert.showAlertControllerWith(message: err.message, onVC: self, buttons: ["OK"], completion: nil)
                 }
+                
             }
         }
     }

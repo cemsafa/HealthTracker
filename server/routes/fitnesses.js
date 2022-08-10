@@ -21,7 +21,9 @@ router.get(
   async (req, res) => {
     const fitness = await Fitness.findById(req.params.id);
     if (!fitness)
-      return res.status(404).send("The fitness with given id was not found.");
+      return res
+        .status(404)
+        .send({ message: "The fitness with given id was not found." });
     res.send(fitness);
   }
 );
@@ -31,7 +33,7 @@ router.post(
   [auth, trial, premium, validator(validate)],
   async (req, res) => {
     const user = await User.findById(req.body.userId);
-    if (!user) return res.status(400).send("Invalid user.");
+    if (!user) return res.status(400).send({ message: "Invalid user." });
 
     const fitness = new Fitness({
       age: req.body.age,
@@ -50,7 +52,7 @@ router.post(
 
       res.send(fitness);
     } catch (ex) {
-      res.status(500).send("Something failed.");
+      res.status(500).send({ message: "Something failed." });
     }
   }
 );
@@ -58,7 +60,9 @@ router.post(
 router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const fitness = await Fitness.findByIdAndRemove(req.params.id);
   if (!fitness)
-    return res.status(404).send("The fitness with given id was not found.");
+    return res
+      .status(404)
+      .send({ message: "The fitness with given id was not found." });
 
   res.send(fitness);
 });

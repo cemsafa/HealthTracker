@@ -23,7 +23,7 @@ router.get(
     if (!bloodpressure)
       return res
         .status(404)
-        .send("The blood pressure with given id was not found.");
+        .send({ message: "The blood pressure with given id was not found." });
     res.send(bloodpressure);
   }
 );
@@ -33,7 +33,7 @@ router.post(
   [auth, trial, premium, validator(validate)],
   async (req, res) => {
     const user = await User.findById(req.body.userId);
-    if (!user) return res.status(400).send("Invalid user.");
+    if (!user) return res.status(400).send({ message: "Invalid user." });
 
     const bloodpressure = new BloodPressure({
       systolic: req.body.systolic,
@@ -53,7 +53,7 @@ router.post(
 
       res.send(bloodpressure);
     } catch (ex) {
-      res.status(500).send("Something failed.");
+      res.status(500).send({ message: "Something failed." });
     }
   }
 );
@@ -63,7 +63,7 @@ router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   if (!bloodpressure)
     return res
       .status(404)
-      .send("The blood pressure with given id was not found.");
+      .send({ message: "The blood pressure with given id was not found." });
 
   res.send(bloodpressure);
 });

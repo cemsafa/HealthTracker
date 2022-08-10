@@ -23,7 +23,7 @@ router.get(
     if (!familymember)
       return res
         .status(404)
-        .send("The family member with given id was not found.");
+        .send({ message: "The family member with given id was not found." });
     res.send(familymember);
   }
 );
@@ -33,13 +33,14 @@ router.post(
   [auth, trial, premium, validator(validate)],
   async (req, res) => {
     const fMember = await lookup(req.body.userId, req.body.memberId);
-    if (fMember) return res.status(404).send("You already have this member.");
+    if (fMember)
+      return res.status(404).send({ message: "You already have this member." });
 
     const member = await User.findById(req.body.memberId);
-    if (!member) return res.status(400).send("Invalid member.");
+    if (!member) return res.status(400).send({ message: "Invalid member." });
 
     const user = await User.findById(req.body.userId);
-    if (!user) return res.status(400).send("Invalid user.");
+    if (!user) return res.status(400).send({ message: "Invalid user." });
 
     const familymember = new FamilyMember({
       memberId: member._id,
@@ -68,7 +69,7 @@ router.post(
 
       res.send(familymember);
     } catch (ex) {
-      res.status(500).send("Something failed.");
+      res.status(500).send({ message: "Something failed." });
     }
   }
 );
@@ -78,7 +79,7 @@ router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   if (!familymember)
     return res
       .status(404)
-      .send("The family member with given id was not found.");
+      .send({ message: "The family member with given id was not found." });
 
   res.send(familymember);
 });

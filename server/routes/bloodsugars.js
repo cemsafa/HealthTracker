@@ -23,7 +23,7 @@ router.get(
     if (!bloodsugar)
       return res
         .status(404)
-        .send("The blood sugar with given id was not found.");
+        .send({ message: "The blood sugar with given id was not found." });
     res.send(bloodsugar);
   }
 );
@@ -33,7 +33,7 @@ router.post(
   [auth, trial, premium, validator(validate)],
   async (req, res) => {
     const user = await User.findById(req.body.userId);
-    if (!user) return res.status(400).send("Invalid user.");
+    if (!user) return res.status(400).send({ message: "Invalid user." });
 
     const bloodsugar = new BloodSugar({
       glucose: req.body.glucose,
@@ -52,7 +52,7 @@ router.post(
 
       res.send(bloodsugar);
     } catch (ex) {
-      res.status(500).send("Something failed.");
+      res.status(500).send({ message: "Something failed." });
     }
   }
 );
@@ -60,7 +60,9 @@ router.post(
 router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const bloodsugar = await BloodSugar.findByIdAndRemove(req.params.id);
   if (!bloodsugar)
-    return res.status(404).send("The blood sugar with given id was not found.");
+    return res
+      .status(404)
+      .send({ message: "The blood sugar with given id was not found." });
 
   res.send(bloodsugar);
 });

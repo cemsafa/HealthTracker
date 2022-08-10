@@ -19,13 +19,14 @@ router.get("/me", [auth], async (req, res) => {
   const user = await User.findById(req.user._id)
     .select("-password")
     .select("-isAdmin");
-  if (!user) return res.status(404).send("User not found.");
+  if (!user) return res.status(404).send({ message: "User not found." });
   res.send(user);
 });
 
 router.post("/", validator(validate), async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
-  if (user) return res.status(400).send("User already registered.");
+  if (user)
+    return res.status(400).send({ message: "User already registered." });
 
   user = new User(_.pick(req.body, ["name", "email", "password"]));
   const salt = await bcrypt.genSalt(10);
@@ -41,7 +42,9 @@ router.post("/", validator(validate), async (req, res) => {
 router.delete("/:id", [auth, admin], async (req, res) => {
   let user = await User.findByIdAndDelete(req.params.id);
   if (!user)
-    return res.status(404).send("The user with given id was not found.");
+    return res
+      .status(404)
+      .send({ message: "The user with given id was not found." });
 
   res.send(user);
 });
