@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QXJ-WQ-hoV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,9 @@
     <customFonts key="customFonts">
         <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-ExtraBold.ttf">
+            <string>Montserrat-ExtraBold</string>
         </array>
         <array key="Montserrat-Light.ttf">
             <string>Montserrat-Light</string>
@@ -19,10 +22,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Sign UpVC-->
+        <!--SignupVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignUpVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" id="BYZ-38-t0r" customClass="SignupVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +105,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="SIGN UP">
                                                     <attributes>
-                                                        <font key="NSFont" size="20" name="MontserratRoman-ExtraBold"/>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -140,10 +143,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="51.5625"/>
+            <point key="canvasLocation" x="58" y="52"/>
+        </scene>
+        <!--Launch ScreenVC-->
+        <scene sceneID="tA0-a0-D03">
+            <objects>
+                <viewController id="QXJ-WQ-hoV" customClass="LaunchScreenVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="BRw-8S-2ZS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-Cr-62w">
+                                <rect key="frame" x="48.5" y="298.5" width="317" height="169.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="logo-healthtracker" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-Yo-glm">
+                                        <rect key="frame" x="67" y="0.0" width="183" height="121"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH TRACKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-hp-SEB">
+                                        <rect key="frame" x="0.0" y="129" width="317" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="33"/>
+                                        <color key="textColor" red="0.3921568627" green="0.43529411759999997" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="57"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple-background" translatesAutoresizingMaskIntoConstraints="NO" id="f30-72-cY1">
+                                <rect key="frame" x="0.0" y="746" width="414" height="150"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.70588235290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="x0L-8M-0qX"/>
+                                    <constraint firstAttribute="height" constant="150" id="zOp-zq-WWx"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="JK1-z7-bYD">
+                                <rect key="frame" x="93" y="788.5" width="228" height="39"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-dev-team" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-jy-2G8">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="cnf-pF-IJx"/>
+                                            <constraint firstAttribute="height" constant="39" id="xLH-P6-fWi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developers Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFF-pB-sLQ">
+                                        <rect key="frame" x="57" y="0.0" width="171" height="39"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BFF-pB-sLQ" firstAttribute="leading" secondItem="I0o-jy-2G8" secondAttribute="trailing" constant="17" id="M8u-QG-hZw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CeU-DP-PjQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="f30-72-cY1" secondAttribute="bottom" id="0K0-hn-29k"/>
+                            <constraint firstItem="f30-72-cY1" firstAttribute="trailing" secondItem="CeU-DP-PjQ" secondAttribute="trailing" id="44b-UF-knU"/>
+                            <constraint firstItem="UFR-Cr-62w" firstAttribute="centerX" secondItem="BRw-8S-2ZS" secondAttribute="centerX" id="7pk-U6-D4s"/>
+                            <constraint firstItem="CeU-DP-PjQ" firstAttribute="bottom" secondItem="JK1-z7-bYD" secondAttribute="bottom" constant="34.5" id="EbT-C4-iYH"/>
+                            <constraint firstItem="f30-72-cY1" firstAttribute="leading" secondItem="CeU-DP-PjQ" secondAttribute="leading" id="Emm-aU-aSd"/>
+                            <constraint firstItem="UFR-Cr-62w" firstAttribute="centerY" secondItem="BRw-8S-2ZS" secondAttribute="centerY" constant="-65" id="Lm9-Kp-ObQ"/>
+                            <constraint firstItem="f30-72-cY1" firstAttribute="trailing" secondItem="CeU-DP-PjQ" secondAttribute="trailing" id="Zxp-kE-5Bf"/>
+                            <constraint firstAttribute="bottom" secondItem="f30-72-cY1" secondAttribute="bottom" id="gXz-rD-QZh"/>
+                            <constraint firstItem="f30-72-cY1" firstAttribute="leading" secondItem="CeU-DP-PjQ" secondAttribute="leading" id="n3L-M7-7K5"/>
+                            <constraint firstItem="JK1-z7-bYD" firstAttribute="centerX" secondItem="BRw-8S-2ZS" secondAttribute="centerX" id="sFw-vR-hGG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LD6-JB-zgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="52"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AZR-Yr-phx">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="6W8-0b-c4F" customClass="HomeVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q36-8P-MqS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TQs-9B-CTX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="PSY-gE-fYt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGB-bz-xu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="1120"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W5i-b7-0iN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1NQ-yw-cfV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaM-RZ-Tng">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6W8-0b-c4F" kind="relationship" relationship="viewControllers" id="pWT-xb-Bi0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydj-o2-qub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="1120"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logo-dev-team" width="40" height="38.5"/>
         <image name="logo-healthtracker" width="183" height="121"/>
         <image name="purple-background" width="810" height="810"/>
         <systemColor name="systemBackgroundColor">

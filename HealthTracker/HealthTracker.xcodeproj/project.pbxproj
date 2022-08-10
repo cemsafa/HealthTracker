@@ -13,12 +13,6 @@
 		B14D139F289D9B5400ED5CFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D139E289D9B5400ED5CFF /* ViewController.swift */; };
 		B14D13A2289D9B5400ED5CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A0289D9B5400ED5CFF /* Main.storyboard */; };
 		B14D13A7289D9B5800ED5CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A5289D9B5800ED5CFF /* LaunchScreen.storyboard */; };
-		D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */; };
-		D932ECEC28A1EC220071478C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */; };
-		D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECED28A1EC450071478C /* Montserrat-Light.ttf */; };
-		D932ECF028A1EC540071478C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */; };
-		D932ECF228A1F37B0071478C /* FontSyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932ECF128A1F37B0071478C /* FontSyles.swift */; };
-		D9E2653228A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9E2653128A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf */; };
 		B1521DE928A3298100C386E1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DE828A3298100C386E1 /* Server.swift */; };
 		B1521DEB28A329E700C386E1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DEA28A329E700C386E1 /* APIManager.swift */; };
 		B1521DEF28A32BE100C386E1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DEE28A32BE100C386E1 /* UserData.swift */; };
@@ -30,6 +24,14 @@
 		B1521DFB28A3317400C386E1 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DFA28A3317400C386E1 /* FamilyMember.swift */; };
 		B1521DFD28A436E900C386E1 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */; };
 		B156E33B28A324EF0069777E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B156E33A28A324EF0069777E /* GoogleService-Info.plist */; };
+		B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0728A44F3F001B66BF /* SignupVC.swift */; };
+		B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0928A450CA001B66BF /* HomeVC.swift */; };
+		D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */; };
+		D932ECEC28A1EC220071478C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */; };
+		D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECED28A1EC450071478C /* Montserrat-Light.ttf */; };
+		D932ECF028A1EC540071478C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */; };
+		D932ECF228A1F37B0071478C /* FontSyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932ECF128A1F37B0071478C /* FontSyles.swift */; };
+		D9E2653228A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9E2653128A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		B1521DFA28A3317400C386E1 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		B156E33A28A324EF0069777E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1C69C0728A44F3F001B66BF /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		B1C69C0928A450CA001B66BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.debug.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -108,12 +112,10 @@
 				B14D139C289D9B5400ED5CFF /* SceneDelegate.swift */,
 				B14D13AE289D9B8500ED5CFF /* Views */,
 				B14D13AF289D9B9200ED5CFF /* Models */,
-				D932ECEA28A1EB1C0071478C /* Fonts */,
 				B14D13B0289D9B9B00ED5CFF /* Controllers */,
 				B14D13B1289D9BAE00ED5CFF /* Supporting Files */,
 				B1521DE728A3295D00C386E1 /* Helper */,
 				B14D13A8289D9B5800ED5CFF /* Info.plist */,
-				D932ECF128A1F37B0071478C /* FontSyles.swift */,
 				B156E33A28A324EF0069777E /* GoogleService-Info.plist */,
 			);
 			path = HealthTracker;
@@ -146,6 +148,8 @@
 			children = (
 				B14D139E289D9B5400ED5CFF /* ViewController.swift */,
 				B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */,
+				B1C69C0728A44F3F001B66BF /* SignupVC.swift */,
+				B1C69C0928A450CA001B66BF /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +157,8 @@
 		B14D13B1289D9BAE00ED5CFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D932ECF128A1F37B0071478C /* FontSyles.swift */,
+				D932ECEA28A1EB1C0071478C /* Fonts */,
 				D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -254,7 +260,6 @@
 				D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */,
 				D9E2653228A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf in Resources */,
 				B156E33B28A324EF0069777E /* GoogleService-Info.plist in Resources */,
-				B14D13A4289D9B5800ED5CFF /* Assets.xcassets in Resources */,
 				B14D13A2289D9B5400ED5CFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,8 +319,10 @@
 				B14D139F289D9B5400ED5CFF /* ViewController.swift in Sources */,
 				D932ECF228A1F37B0071478C /* FontSyles.swift in Sources */,
 				B14D139B289D9B5400ED5CFF /* AppDelegate.swift in Sources */,
+				B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */,
 				B1521DEB28A329E700C386E1 /* APIManager.swift in Sources */,
 				B1521DF328A32EB200C386E1 /* Fitness.swift in Sources */,
+				B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */,
 				B1521DF928A3312D00C386E1 /* HeartRate.swift in Sources */,
 				B1521DFB28A3317400C386E1 /* FamilyMember.swift in Sources */,
 				B1521DF528A3309900C386E1 /* BloodPressure.swift in Sources */,
