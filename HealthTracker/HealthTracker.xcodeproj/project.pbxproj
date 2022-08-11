@@ -29,6 +29,7 @@
 		B181E31D28A548BC0004D33E /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181E31C28A548BC0004D33E /* TabbarVC.swift */; };
 		B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0728A44F3F001B66BF /* SignupVC.swift */; };
 		B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0928A450CA001B66BF /* HomeVC.swift */; };
+		B1DF3E3928A5A53600631AE1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */; };
 		D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */; };
 		D932ECEC28A1EC220071478C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */; };
 		D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECED28A1EC450071478C /* Montserrat-Light.ttf */; };
@@ -63,6 +64,7 @@
 		B181E31C28A548BC0004D33E /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		B1C69C0728A44F3F001B66BF /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B1C69C0928A450CA001B66BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.debug.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				B1C69C0928A450CA001B66BF /* HomeVC.swift */,
 				B181E31028A460D90004D33E /* SigninVC.swift */,
 				B181E31C28A548BC0004D33E /* TabbarVC.swift */,
+				B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DF3E3928A5A53600631AE1 /* ProfileVC.swift in Sources */,
 				B1521DEF28A32BE100C386E1 /* UserData.swift in Sources */,
 				B1521DFD28A436E900C386E1 /* LaunchScreenVC.swift in Sources */,
 				B1521DF728A330E800C386E1 /* BloodSugar.swift in Sources */,

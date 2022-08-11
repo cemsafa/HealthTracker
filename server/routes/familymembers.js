@@ -28,6 +28,17 @@ router.get(
   }
 );
 
+router.get("/contains/self", [auth, trial, premium], async (req, res) => {
+  const familymembers = await FamilyMember.find({
+    userId: req.user._id,
+  }).sort("createdAt");
+  if (familymembers.length === 0)
+    return res
+      .status(404)
+      .send({ message: "This user has no family members." });
+  res.send(familymembers);
+});
+
 router.post(
   "/",
   [auth, trial, premium, validator(validate)],

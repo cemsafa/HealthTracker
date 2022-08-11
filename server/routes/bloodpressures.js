@@ -28,6 +28,17 @@ router.get(
   }
 );
 
+router.get("/contains/self", [auth, trial, premium], async (req, res) => {
+  const bloodpressures = await BloodPressure.find({
+    userId: req.user._id,
+  }).sort("createdAt");
+  if (bloodpressures.length === 0)
+    return res
+      .status(404)
+      .send({ message: "This user has no blood pressure values." });
+  res.send(bloodpressures);
+});
+
 router.post(
   "/",
   [auth, trial, premium, validator(validate)],

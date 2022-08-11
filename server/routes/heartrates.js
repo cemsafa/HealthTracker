@@ -28,6 +28,17 @@ router.get(
   }
 );
 
+router.get("/contains/self", [auth, trial, premium], async (req, res) => {
+  const heartrates = await HeartRate.find({
+    userId: req.user._id,
+  }).sort("createdAt");
+  if (heartrates.length === 0)
+    return res
+      .status(404)
+      .send({ message: "This user has no heart rate values." });
+  res.send(heartrates);
+});
+
 router.post(
   "/",
   [auth, trial, premium, validator(validate)],

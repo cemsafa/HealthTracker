@@ -28,6 +28,17 @@ router.get(
   }
 );
 
+router.get("/contains/self", [auth, trial, premium], async (req, res) => {
+  const bloodsugars = await BloodSugar.find({
+    userId: req.user._id,
+  }).sort("createdAt");
+  if (bloodsugars.length === 0)
+    return res
+      .status(404)
+      .send({ message: "This user has no blood sugar values." });
+  res.send(bloodsugars);
+});
+
 router.post(
   "/",
   [auth, trial, premium, validator(validate)],

@@ -28,6 +28,17 @@ router.get(
   }
 );
 
+router.get("/contains/self", [auth, trial, premium], async (req, res) => {
+  const fitnesses = await Fitness.find({
+    userId: req.user._id,
+  }).sort("createdAt");
+  if (fitnesses.length === 0)
+    return res
+      .status(404)
+      .send({ message: "This user has no fitness values." });
+  res.send(fitnesses);
+});
+
 router.post(
   "/",
   [auth, trial, premium, validator(validate)],

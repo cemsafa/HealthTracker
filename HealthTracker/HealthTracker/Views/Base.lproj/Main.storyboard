@@ -239,7 +239,7 @@
             </objects>
             <point key="canvasLocation" x="-852" y="52"/>
         </scene>
-        <!--HomeVC-->
+        <!--YOUR VITAL SIGNS-->
         <scene sceneID="AZR-Yr-phx">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="6W8-0b-c4F" customClass="HomeVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,7 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="TQs-9B-CTX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OXY-Ny-zwi"/>
+                    <navigationItem key="navigationItem" title="YOUR VITAL SIGNS" id="OXY-Ny-zwi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGB-bz-xu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,7 +403,7 @@
             </objects>
             <point key="canvasLocation" x="1000" y="52"/>
         </scene>
-        <!--View Controller-->
+        <!--FAMILY MEMBERS-->
         <scene sceneID="dg0-HB-KwK">
             <objects>
                 <viewController id="2du-XA-5vQ" sceneMemberID="viewController">
@@ -413,29 +413,94 @@
                         <viewLayoutGuide key="safeArea" id="eb8-3T-Pbf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IWl-kd-iNd"/>
+                    <navigationItem key="navigationItem" title="FAMILY MEMBERS" id="IWl-kd-iNd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuJ-3Z-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-316" y="2608"/>
         </scene>
-        <!--View Controller-->
+        <!--PROFILE-->
         <scene sceneID="Hno-5T-c4N">
             <objects>
-                <viewController id="kvR-wv-iNH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="kvR-wv-iNH" customClass="ProfileVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lp9-QN-yzE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-vv-tz8">
+                                <rect key="frame" x="37" y="325" width="340" height="246.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGNED IN AS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-aZ-saZ">
+                                        <rect key="frame" x="81" y="0.0" width="178" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="34"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="NAME" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1K-qM-X0i">
+                                        <rect key="frame" x="0.0" y="56.5" width="340" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="MKw-M8-1AZ"/>
+                                            <constraint firstAttribute="height" constant="45" id="vkx-Ww-VH8"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" background="purple-background" translatesAutoresizingMaskIntoConstraints="NO" id="fy7-JH-wq8">
+                                        <rect key="frame" x="0.0" y="128.5" width="340" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="gSG-Ae-IRf"/>
+                                            <constraint firstAttribute="width" constant="340" id="htF-X1-gZg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGX-0u-Inm">
+                                        <rect key="frame" x="0.0" y="200.5" width="340" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="LJZ-4D-qKQ"/>
+                                            <constraint firstAttribute="height" constant="46" id="x4t-Wq-22X"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SIGN OUT">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.90980392160000001" green="0.66666666669999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signinBtnTapped:" destination="TjH-i3-vhi" eventType="touchUpInside" id="9M9-rI-p1O"/>
+                                            <action selector="signoutBtnTapped:" destination="kvR-wv-iNH" eventType="touchUpInside" id="WIu-qp-WYv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aAL-6o-Slz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ez-vv-tz8" firstAttribute="centerX" secondItem="lp9-QN-yzE" secondAttribute="centerX" id="2Tl-Ww-flF"/>
+                            <constraint firstItem="2Ez-vv-tz8" firstAttribute="centerY" secondItem="lp9-QN-yzE" secondAttribute="centerY" id="nJP-BE-ETw"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZWB-m3-6Uu"/>
+                    <navigationItem key="navigationItem" title="PROFILE" id="ZWB-m3-6Uu"/>
+                    <connections>
+                        <outlet property="emailTF" destination="fy7-JH-wq8" id="nZo-E0-yVk"/>
+                        <outlet property="nameTF" destination="Y1K-qM-X0i" id="fBm-Id-UnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUc-3L-7SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1336" y="2608"/>
         </scene>
-        <!--View Controller-->
+        <!--CHAT-->
         <scene sceneID="Yms-aj-U82">
             <objects>
                 <viewController id="3jV-6k-j59" sceneMemberID="viewController">
@@ -445,7 +510,7 @@
                         <viewLayoutGuide key="safeArea" id="ug6-Gy-Bub"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hGb-9X-7rm"/>
+                    <navigationItem key="navigationItem" title="CHAT" id="hGb-9X-7rm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qL0-bn-y05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,6 +525,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hkE-4e-QcZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -479,6 +550,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xbm-b8-GeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -498,6 +575,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TmD-0n-3Nv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -517,6 +600,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LA0-3d-Cs3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
