@@ -18,6 +18,11 @@ public enum Server {
     case addBloodPressure(userId: String, systolic: Int, diastolic: Int)
     case addHeartRate(userId: String, bpm: Int)
     case addFitness(userId: String, age: Int, weigth: Double, heigth: Double, stamina: String, strength: String)
+    case getBloodSugarsSelf
+    case getBloodPressuresSelf
+    case getHeartRatesSelf
+    case getFitnessesSelf
+    case getFamilyMembersSelf
 }
 
 extension Server: TargetType {
@@ -51,12 +56,22 @@ extension Server: TargetType {
             return "/heartrates"
         case .addFitness:
             return "/fitnesses"
+        case .getBloodSugarsSelf:
+            return "/bloodsugars/contains/self"
+        case .getBloodPressuresSelf:
+            return "/bloodpressures/contains/self"
+        case .getHeartRatesSelf:
+            return "/heartrates/contains/self"
+        case .getFitnessesSelf:
+            return "/fitnesses/contains/self"
+        case .getFamilyMembersSelf:
+            return "/familymembers/contains/self"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .getUserSelf, .getUser, .getUsers: return .get
+        case .getUserSelf, .getUser, .getUsers, .getBloodSugarsSelf, .getBloodPressuresSelf, .getHeartRatesSelf, .getFitnessesSelf, .getFamilyMembersSelf: return .get
         case .login, .signup, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return .post
         }
     }
@@ -110,6 +125,16 @@ extension Server: TargetType {
                 "stamina": stamina,
                 "strength": strength
             ], encoding: JSONEncoding.default)
+        case .getBloodSugarsSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getBloodPressuresSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getHeartRatesSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getFitnessesSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getFamilyMembersSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
 
@@ -130,7 +155,7 @@ extension Server: TargetType {
     func isAuthenticatedCall() -> Bool {
         switch self {
         case .login, .signup: return false
-        case .getUserSelf, .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return true
+        case .getUserSelf, .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness, .getBloodSugarsSelf, .getBloodPressuresSelf, .getHeartRatesSelf, .getFitnessesSelf, .getFamilyMembersSelf: return true
         }
     }
     
