@@ -32,10 +32,10 @@ class LaunchScreenVC: UIViewController {
         
         if UserData.getToken() != nil {
             let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-            homeVC.modalTransitionStyle = .crossDissolve
-            homeVC.modalPresentationStyle = .fullScreen
-            self.present(homeVC, animated: true, completion: nil)
+            let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
+            tabbarVC.modalTransitionStyle = .crossDissolve
+            tabbarVC.modalPresentationStyle = .fullScreen
+            self.present(tabbarVC, animated: true, completion: nil)
         } else {
             let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
             let signupVC = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
