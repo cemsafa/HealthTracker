@@ -27,7 +27,7 @@ router.get("/:id", [auth, validateObjectId], async (req, res) => {
   res.send(user);
 });
 
-router.get("/me", [auth], async (req, res) => {
+router.get("/self/me", [auth], async (req, res) => {
   const user = await User.findById(req.user._id)
     .select("-password")
     .select("-isAdmin");

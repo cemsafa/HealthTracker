@@ -36,7 +36,7 @@ extension Server: TargetType {
         case .signup:
             return "/users"
         case .getUserSelf:
-            return "/users/me"
+            return "/users/self/me"
         case .getUser(let id):
             return "/users/\(id)"
         case .getUsers:
