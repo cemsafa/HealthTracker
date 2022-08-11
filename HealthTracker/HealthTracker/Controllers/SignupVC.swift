@@ -40,7 +40,7 @@ class SignupVC: UIViewController {
                 if let json = try? response.mapJSON(), let authResponse = Mapper<AuthResponse>().map(JSON: json as! [String: Any]), let token = authResponse.token {
                     UserDefaults.standard.set(token, forKey: "token")
                     
-                    APIManager.providerNoLog.request(.getUser) { result in
+                    APIManager.providerNoLog.request(.getUserSelf) { result in
                         switch result {
                         case .success(let response):
                             if let json = try? response.mapJSON(), let user = Mapper<User>().map(JSON: json as! [String: Any]) {

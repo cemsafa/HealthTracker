@@ -10,7 +10,8 @@ import Moya
 public enum Server {
     case login(email: String, password: String)
     case signup(name: String, email: String, password: String)
-    case getUser
+    case getUserSelf
+    case getUser(id: String)
     case getUsers
     case addFamilyMember(userId: String, memberId: String)
     case addBloodSugar(userId: String, glucose: Int)
@@ -34,8 +35,10 @@ extension Server: TargetType {
             return "/auth"
         case .signup:
             return "/users"
-        case .getUser:
+        case .getUserSelf:
             return "/users/me"
+        case .getUser(let id):
+            return "/users/\(id)"
         case .getUsers:
             return "/users"
         case .addFamilyMember:
@@ -53,7 +56,7 @@ extension Server: TargetType {
 
     public var method: Moya.Method {
         switch self {
-        case .getUser, .getUsers: return .get
+        case .getUserSelf, .getUser, .getUsers: return .get
         case .login, .signup, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return .post
         }
     }
@@ -71,6 +74,8 @@ extension Server: TargetType {
                 "email": email,
                 "password": password
             ], encoding: JSONEncoding.default)
+        case .getUserSelf:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .getUser:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .getUsers:
@@ -125,7 +130,7 @@ extension Server: TargetType {
     func isAuthenticatedCall() -> Bool {
         switch self {
         case .login, .signup: return false
-        case .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return true
+        case .getUserSelf, .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return true
         }
     }
     

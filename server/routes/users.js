@@ -2,6 +2,7 @@ const { User, validate, generateAuthToken } = require("../models/user");
 const auth = require("../middleware/auth");
 const admin = require("../middleware/admin");
 const validator = require("../middleware/validate");
+const validateObjectId = require("../middleware/validateObjectId");
 const bcrypt = require("bcrypt");
 const _ = require("lodash");
 const express = require("express");
@@ -13,6 +14,17 @@ router.get("/", [auth], async (req, res) => {
     .select("-password")
     .select("-isAdmin");
   res.send(users);
+});
+
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
+  const user = await User.findById(req.params.id)
+    .select("-password")
+    .select("-isAdmin");
+  if (!user)
+    return res
+      .status(404)
+      .send({ message: "The user with given id was not found." });
+  res.send(user);
 });
 
 router.get("/me", [auth], async (req, res) => {
