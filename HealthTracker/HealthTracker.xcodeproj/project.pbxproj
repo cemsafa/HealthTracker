@@ -27,6 +27,7 @@
 		B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0728A44F3F001B66BF /* SignupVC.swift */; };
 		B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0928A450CA001B66BF /* HomeVC.swift */; };
 		D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */; };
+		D91CDE2928A4626E00F5C9DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D91CDE2828A4626D00F5C9DF /* GoogleService-Info.plist */; };
 		D932ECEC28A1EC220071478C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */; };
 		D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECED28A1EC450071478C /* Montserrat-Light.ttf */; };
 		D932ECF028A1EC540071478C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */; };
@@ -59,6 +60,7 @@
 		B1C69C0928A450CA001B66BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C6D1B171E90765F3FABAE390 /* Pods-HealthTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.debug.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D916F7FA28A2A3F500FB0D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D91CDE2828A4626D00F5C9DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D932ECEB28A1EC220071478C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		D932ECED28A1EC450071478C /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				B14D13B1289D9BAE00ED5CFF /* Supporting Files */,
 				B1521DE728A3295D00C386E1 /* Helper */,
 				B14D13A8289D9B5800ED5CFF /* Info.plist */,
+				D91CDE2828A4626D00F5C9DF /* GoogleService-Info.plist */,
 				B156E33A28A324EF0069777E /* GoogleService-Info.plist */,
 			);
 			path = HealthTracker;
@@ -255,6 +258,7 @@
 			files = (
 				D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */,
 				D932ECEC28A1EC220071478C /* Montserrat-Regular.ttf in Resources */,
+				D91CDE2928A4626E00F5C9DF /* GoogleService-Info.plist in Resources */,
 				D932ECF028A1EC540071478C /* Montserrat-Bold.ttf in Resources */,
 				B14D13A7289D9B5800ED5CFF /* LaunchScreen.storyboard in Resources */,
 				D916F7FB28A2A3F500FB0D46 /* Assets.xcassets in Resources */,
