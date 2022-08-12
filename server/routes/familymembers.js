@@ -36,7 +36,7 @@ router.get("/contains/self", [auth, trial, premium], async (req, res) => {
     return res
       .status(404)
       .send({ message: "This user has no family members." });
-  res.send(familymembers);
+  res.send({ data: familymembers });
 });
 
 router.post(

@@ -16,6 +16,7 @@ class Fitness: Mappable, Codable {
     var heigth: Double?
     var stamina: String?
     var strength: String?
+    var createdAt: String?
     
     required init?(map: Map) {
         
@@ -28,5 +29,19 @@ class Fitness: Mappable, Codable {
         heigth <- map["heigth"]
         stamina <- map["stamina"]
         strength <- map["strength"]
+        createdAt <- map["createdAt"]
+    }
+}
+
+class FitnessSelf: Mappable, Codable {
+    
+    var data: [Fitness]?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        data <- map["data"]
     }
 }

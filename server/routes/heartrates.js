@@ -36,7 +36,7 @@ router.get("/contains/self", [auth, trial, premium], async (req, res) => {
     return res
       .status(404)
       .send({ message: "This user has no heart rate values." });
-  res.send(heartrates);
+  res.send({ data: heartrates });
 });
 
 router.post(

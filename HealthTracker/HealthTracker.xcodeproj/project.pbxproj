@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		23E9AA1C4AC2B45224E7A402 /* Pods_HealthTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954D87DC849FC8E1C3521738 /* Pods_HealthTracker.framework */; };
+		B1090C9D28A6EF1500626C73 /* HeartRateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090C9C28A6EF1500626C73 /* HeartRateVC.swift */; };
+		B1090C9F28A6EF3B00626C73 /* BloodPressureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090C9E28A6EF3B00626C73 /* BloodPressureVC.swift */; };
+		B1090CA128A6EF4F00626C73 /* BloodSugarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090CA028A6EF4F00626C73 /* BloodSugarVC.swift */; };
+		B1090CA328A6EF6500626C73 /* FitnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090CA228A6EF6500626C73 /* FitnessVC.swift */; };
+		B1090CA528A6FDB900626C73 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090CA428A6FDB900626C73 /* Helper.swift */; };
 		B14D139B289D9B5400ED5CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D139A289D9B5400ED5CFF /* AppDelegate.swift */; };
 		B14D139D289D9B5400ED5CFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D139C289D9B5400ED5CFF /* SceneDelegate.swift */; };
 		B14D13A2289D9B5400ED5CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14D13A0289D9B5400ED5CFF /* Main.storyboard */; };
@@ -41,6 +46,11 @@
 /* Begin PBXFileReference section */
 		91BFC38FF90553DB5CA8F5CC /* Pods-HealthTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthTracker.release.xcconfig"; path = "Target Support Files/Pods-HealthTracker/Pods-HealthTracker.release.xcconfig"; sourceTree = "<group>"; };
 		954D87DC849FC8E1C3521738 /* Pods_HealthTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1090C9C28A6EF1500626C73 /* HeartRateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateVC.swift; sourceTree = "<group>"; };
+		B1090C9E28A6EF3B00626C73 /* BloodPressureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureVC.swift; sourceTree = "<group>"; };
+		B1090CA028A6EF4F00626C73 /* BloodSugarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarVC.swift; sourceTree = "<group>"; };
+		B1090CA228A6EF6500626C73 /* FitnessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessVC.swift; sourceTree = "<group>"; };
+		B1090CA428A6FDB900626C73 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B14D1397289D9B5400ED5CFF /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14D139A289D9B5400ED5CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14D139C289D9B5400ED5CFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,23 @@
 				91BFC38FF90553DB5CA8F5CC /* Pods-HealthTracker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B1090C9628A6C81C00626C73 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B1521DE828A3298100C386E1 /* Server.swift */,
+				B1521DEA28A329E700C386E1 /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B1090C9728A6C82E00626C73 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B181E31628A477F90004D33E /* Alert.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		B14D138E289D9B5400ED5CFF = {
@@ -161,6 +188,10 @@
 				B181E31028A460D90004D33E /* SigninVC.swift */,
 				B181E31C28A548BC0004D33E /* TabbarVC.swift */,
 				B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */,
+				B1090C9C28A6EF1500626C73 /* HeartRateVC.swift */,
+				B1090C9E28A6EF3B00626C73 /* BloodPressureVC.swift */,
+				B1090CA028A6EF4F00626C73 /* BloodSugarVC.swift */,
+				B1090CA228A6EF6500626C73 /* FitnessVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,10 +209,10 @@
 		B1521DE728A3295D00C386E1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				B1521DE828A3298100C386E1 /* Server.swift */,
-				B1521DEA28A329E700C386E1 /* APIManager.swift */,
+				B1090C9628A6C81C00626C73 /* Networking */,
+				B1090C9728A6C82E00626C73 /* UI */,
 				B1521DEE28A32BE100C386E1 /* UserData.swift */,
-				B181E31628A477F90004D33E /* Alert.swift */,
+				B1090CA428A6FDB900626C73 /* Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -331,7 +362,9 @@
 				B1521DF728A330E800C386E1 /* BloodSugar.swift in Sources */,
 				D932ECF228A1F37B0071478C /* FontSyles.swift in Sources */,
 				B181E31728A477F90004D33E /* Alert.swift in Sources */,
+				B1090C9F28A6EF3B00626C73 /* BloodPressureVC.swift in Sources */,
 				B14D139B289D9B5400ED5CFF /* AppDelegate.swift in Sources */,
+				B1090CA128A6EF4F00626C73 /* BloodSugarVC.swift in Sources */,
 				B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */,
 				B1521DEB28A329E700C386E1 /* APIManager.swift in Sources */,
 				B1521DF328A32EB200C386E1 /* Fitness.swift in Sources */,
@@ -345,6 +378,9 @@
 				B181E31528A46BE30004D33E /* ErrorResponse.swift in Sources */,
 				B14D139D289D9B5400ED5CFF /* SceneDelegate.swift in Sources */,
 				B1521DF128A32E0F00C386E1 /* User.swift in Sources */,
+				B1090CA528A6FDB900626C73 /* Helper.swift in Sources */,
+				B1090C9D28A6EF1500626C73 /* HeartRateVC.swift in Sources */,
+				B1090CA328A6EF6500626C73 /* FitnessVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

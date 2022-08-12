@@ -36,7 +36,7 @@ router.get("/contains/self", [auth, trial, premium], async (req, res) => {
     return res
       .status(404)
       .send({ message: "This user has no blood pressure values." });
-  res.send(bloodpressures);
+  res.send({ data: bloodpressures });
 });
 
 router.post(
