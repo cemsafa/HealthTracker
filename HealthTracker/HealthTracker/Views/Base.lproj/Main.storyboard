@@ -1152,6 +1152,7 @@
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="saveBtnTapped:" destination="gON-5E-5eh" eventType="touchUpInside" id="lu5-gJ-UP4"/>
                                                     <action selector="signupBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcG-CX-9bB"/>
                                                 </connections>
                                             </button>
@@ -1200,6 +1201,11 @@
                     <navigationItem key="navigationItem" title="BLOOD SUGAR" id="5v9-cA-sGc">
                         <barButtonItem key="rightBarButtonItem" image="ic-chart" id="Twg-xW-t3Z"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLbl" destination="tR6-pa-ofz" id="axF-hy-4kb"/>
+                        <outlet property="glucoseLbl" destination="ccE-oF-Bjs" id="sQY-an-9Fd"/>
+                        <outlet property="glucoseTF" destination="sKx-El-wG7" id="gbf-oV-c8e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8d6-KQ-vbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
