@@ -35,6 +35,13 @@ router.get("/self/me", [auth], async (req, res) => {
   res.send(user);
 });
 
+router.post("/search", [auth], async (req, res) => {
+  let user = await User.findOne({ email: req.body.email });
+  if (!user) return res.status(404).send({ message: "User not found." });
+
+  res.send(_.pick(user, ["_id"]));
+});
+
 router.post("/", validator(validate), async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (user)
