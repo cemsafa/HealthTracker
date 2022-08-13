@@ -1,5 +1,5 @@
 //
-//  FamilyListVC.swift
+//  ChatListVC.swift
 //  HealthTracker
 //
 //  Created by Ma. Kristina Ginga on 2022-08-13.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-
-class FamilyListVC: UIViewController   {
-
-    @IBOutlet weak var familyListTable: UITableView!
-    @IBOutlet weak var searchFamilyList: UISearchBar!
+class ChatListVC: UIViewController {    
+    
+  
+    @IBOutlet weak var chatListTable: UITableView!
+    @IBOutlet weak var searchChatList: UISearchBar!
     
     
     override func viewDidLoad() {
@@ -19,8 +19,6 @@ class FamilyListVC: UIViewController   {
 
         // Do any additional setup after loading the view.
     }
-    
-    
     
 
     /*
