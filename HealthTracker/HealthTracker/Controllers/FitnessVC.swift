@@ -97,6 +97,12 @@ class FitnessVC: UIViewController {
             Alert.showAlertControllerWith(message: "Please fill all fields", onVC: self, buttons: ["OK"], completion: nil)
         }
     }
+    
+    @IBAction func chartBtnTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let fitnessChartVC = storyboard.instantiateViewController(withIdentifier: "FitnessChartVC") as! FitnessChartVC
+        self.navigationController?.pushViewController(fitnessChartVC, animated: true)
+    }
 }
 
 // MARK: - UIPickerViewDelegate, UIPickerViewDataSource

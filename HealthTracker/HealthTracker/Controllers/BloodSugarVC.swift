@@ -67,4 +67,10 @@ class BloodSugarVC: UIViewController {
             Alert.showAlertControllerWith(message: "Please fill all fields", onVC: self, buttons: ["OK"], completion: nil)
         }
     }
+    
+    @IBAction func chartBtnTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let bloodSugarChartVC = storyboard.instantiateViewController(withIdentifier: "BloodSugarChartVC") as! BloodSugarChartVC
+        self.navigationController?.pushViewController(bloodSugarChartVC, animated: true)
+    }
 }

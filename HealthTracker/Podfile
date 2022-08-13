@@ -10,5 +10,6 @@ target 'HealthTracker' do
   pod 'FirebaseFirestore'
   pod 'ObjectMapper'
   pod 'MessageKit'
+  pod 'Charts'
 
 end

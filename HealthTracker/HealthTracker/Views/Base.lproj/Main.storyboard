@@ -799,7 +799,6 @@
                                                     <constraint firstAttribute="width" constant="300" id="4ZR-dn-z1t"/>
                                                     <constraint firstAttribute="height" constant="45" id="w3H-LL-zzV"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -830,7 +829,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HEART RATE" id="KCP-6K-b2a">
-                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="Xpp-O5-v3G"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="Xpp-O5-v3G">
+                            <connections>
+                                <action selector="chartBtnTapped:" destination="uSn-ho-AAW" id="1LA-NS-6C3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLbl" destination="okI-pM-GtD" id="ugx-dz-2zb"/>
@@ -841,6 +844,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJW-3p-X8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1139" y="3329"/>
+        </scene>
+        <!--HEART RATE CHART-->
+        <scene sceneID="o6H-Ty-E6k">
+            <objects>
+                <viewController storyboardIdentifier="HeartRateChartVC" id="fD4-fF-Wyn" customClass="HeartRateChartVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bd2-gv-SbB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duz-sE-cng" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="17" y="258" width="380" height="380"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="EZr-Du-ub3"/>
+                                    <constraint firstAttribute="width" constant="380" id="Q8k-52-V2U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LQg-RI-W3D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Duz-sE-cng" firstAttribute="centerX" secondItem="Bd2-gv-SbB" secondAttribute="centerX" id="pq0-x4-tMw"/>
+                            <constraint firstItem="Duz-sE-cng" firstAttribute="centerY" secondItem="Bd2-gv-SbB" secondAttribute="centerY" id="r45-ml-iLr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="HEART RATE CHART" id="ez3-fT-hja"/>
+                    <connections>
+                        <outlet property="chartView" destination="Duz-sE-cng" id="6V6-xL-lD9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-TH-J3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="3328.7946428571427"/>
         </scene>
         <!--BLOOD PRESSURE-->
         <scene sceneID="m0S-5L-IMI">
@@ -989,7 +1025,6 @@
                                                     <constraint firstAttribute="width" constant="300" id="Lmx-bG-yS9"/>
                                                     <constraint firstAttribute="height" constant="45" id="cpB-Sw-82n"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1005,7 +1040,6 @@
                                                     <constraint firstAttribute="width" constant="300" id="M5P-YC-YOm"/>
                                                     <constraint firstAttribute="height" constant="45" id="mw3-G3-KDZ"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1040,7 +1074,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BLOOD PRESSURE" id="tp2-j7-D07">
-                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="OJX-gv-M96"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="OJX-gv-M96">
+                            <connections>
+                                <action selector="chartBtnTapped:" destination="ue3-jM-daL" id="UZW-GC-HNc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLbl" destination="1ql-eW-2LR" id="wvy-DJ-1dW"/>
@@ -1053,6 +1091,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLW-4i-FX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1139" y="4055"/>
+        </scene>
+        <!--BLOOD PRESSURE CHART-->
+        <scene sceneID="goT-Um-h2Q">
+            <objects>
+                <viewController storyboardIdentifier="BloodPressureChartVC" id="gIh-cJ-t9W" customClass="BloodPressureChartVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odJ-sp-5aa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hon-N6-bM4" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="17" y="258" width="380" height="380"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="fN9-7F-XQN"/>
+                                    <constraint firstAttribute="width" constant="380" id="of3-65-jBu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iGC-1s-ZFt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hon-N6-bM4" firstAttribute="centerY" secondItem="odJ-sp-5aa" secondAttribute="centerY" id="HQi-6I-NQB"/>
+                            <constraint firstItem="hon-N6-bM4" firstAttribute="centerX" secondItem="odJ-sp-5aa" secondAttribute="centerX" id="pJ7-Ms-viA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BLOOD PRESSURE CHART" id="eAh-gf-auR"/>
+                    <connections>
+                        <outlet property="chartView" destination="hon-N6-bM4" id="T3s-cP-eNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1c-Zy-J81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="4054.6875"/>
         </scene>
         <!--BLOOD SUGAR-->
         <scene sceneID="t1a-Fn-ggP">
@@ -1168,7 +1239,6 @@
                                                     <constraint firstAttribute="width" constant="300" id="cn0-7d-VNT"/>
                                                     <constraint firstAttribute="height" constant="45" id="vx9-Nz-hvv"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1199,7 +1269,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BLOOD SUGAR" id="5v9-cA-sGc">
-                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="Twg-xW-t3Z"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="Twg-xW-t3Z">
+                            <connections>
+                                <action selector="chartBtnTapped:" destination="gON-5E-5eh" id="SL4-WE-rC3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLbl" destination="tR6-pa-ofz" id="axF-hy-4kb"/>
@@ -1210,6 +1284,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8d6-KQ-vbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1139" y="4794"/>
+        </scene>
+        <!--BLOOD SUGAR CHART-->
+        <scene sceneID="br9-6p-BW2">
+            <objects>
+                <viewController storyboardIdentifier="BloodSugarChartVC" id="Qik-Pt-PQz" customClass="BloodSugarChartVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vha-OQ-adw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-1G-MmN" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="17" y="258" width="380" height="380"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="Bzf-y8-NeE"/>
+                                    <constraint firstAttribute="height" constant="380" id="pEm-p2-i5J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uBy-Q9-yGM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fPO-1G-MmN" firstAttribute="centerX" secondItem="Vha-OQ-adw" secondAttribute="centerX" id="dfR-WO-U67"/>
+                            <constraint firstItem="fPO-1G-MmN" firstAttribute="centerY" secondItem="Vha-OQ-adw" secondAttribute="centerY" id="qPS-0a-6pP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BLOOD SUGAR CHART" id="z7u-yW-u1c"/>
+                    <connections>
+                        <outlet property="chartView" destination="fPO-1G-MmN" id="k1P-Wh-ysw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll8-ly-y94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="4793.9732142857138"/>
         </scene>
         <!--FITNESS-->
         <scene sceneID="KLc-XV-EFL">
@@ -1414,7 +1521,6 @@
                                                     <constraint firstAttribute="height" constant="45" id="Ike-Tj-JcG"/>
                                                     <constraint firstAttribute="width" constant="145" id="psk-aC-gxI"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1430,7 +1536,6 @@
                                                     <constraint firstAttribute="height" constant="45" id="fAS-m9-Os3"/>
                                                     <constraint firstAttribute="width" constant="145" id="jsx-uu-UFr"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1446,7 +1551,6 @@
                                                     <constraint firstAttribute="height" constant="45" id="qsj-jz-Oa8"/>
                                                     <constraint firstAttribute="width" constant="145" id="x62-8a-XAF"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -1519,7 +1623,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FITNESS" id="ZhM-nz-nWZ">
-                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="gov-fs-EQR"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic-chart" id="gov-fs-EQR">
+                            <connections>
+                                <action selector="chartBtnTapped:" destination="Tzf-Cc-Mf3" id="5Ut-0b-fpY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ageLbl" destination="UU8-Li-N6p" id="haF-Fx-8XU"/>
@@ -1538,6 +1646,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qw-wg-64D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1139" y="5526"/>
+        </scene>
+        <!--FITNESS CHART-->
+        <scene sceneID="jsm-Sp-q5o">
+            <objects>
+                <viewController storyboardIdentifier="FitnessChartVC" id="Mpt-CA-MeF" customClass="FitnessChartVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VFh-Jy-xxv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVb-af-d8a" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="17" y="258" width="380" height="380"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="7Dz-a7-EQ4"/>
+                                    <constraint firstAttribute="height" constant="380" id="LLx-Ou-457"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jf1-Rb-1hc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aVb-af-d8a" firstAttribute="centerY" secondItem="VFh-Jy-xxv" secondAttribute="centerY" id="0O8-HP-ZI7"/>
+                            <constraint firstItem="aVb-af-d8a" firstAttribute="centerX" secondItem="VFh-Jy-xxv" secondAttribute="centerX" id="6e0-8Q-ZJ5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FITNESS CHART" id="mve-e6-2Ar"/>
+                    <connections>
+                        <outlet property="chartView" destination="aVb-af-d8a" id="L2V-a2-Vq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNC-Bs-Wnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="5525.8928571428569"/>
         </scene>
         <!--TabbarVC-->
         <scene sceneID="W5i-b7-0iN">
@@ -1971,6 +2112,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9t-KS-vtc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2049" y="5526"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zm9-Hf-E6F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pRZ-hl-9p2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TXA-cv-4kU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mpt-CA-MeF" kind="relationship" relationship="rootViewController" id="J5j-ZW-lh1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inW-DO-vVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="5525.8928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZzV-XV-gX1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XBv-Vs-Hyh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oa0-L2-b3S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qik-Pt-PQz" kind="relationship" relationship="rootViewController" id="ASn-p5-Yl8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0N-rc-vhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="4793.9732142857138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x60-Pu-ErH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YgK-jO-tgz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JoB-kc-qms">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gIh-cJ-t9W" kind="relationship" relationship="rootViewController" id="3Zd-PW-1cX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg1-bL-Yyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="4054.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X4s-mX-FLc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nBf-Ae-cNU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C3w-ds-Qtp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fD4-fF-Wyn" kind="relationship" relationship="rootViewController" id="es5-2O-9I6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrs-fh-kJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="3328.7946428571427"/>
         </scene>
     </scenes>
     <resources>

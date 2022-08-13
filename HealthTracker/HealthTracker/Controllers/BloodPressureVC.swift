@@ -72,4 +72,10 @@ class BloodPressureVC: UIViewController {
             Alert.showAlertControllerWith(message: "Please fill all fields", onVC: self, buttons: ["OK"], completion: nil)
         }
     }
+    
+    @IBAction func chartBtnTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let bloodPressureChartVC = storyboard.instantiateViewController(withIdentifier: "BloodPressureChartVC") as! BloodPressureChartVC
+        self.navigationController?.pushViewController(bloodPressureChartVC, animated: true)
+    }
 }

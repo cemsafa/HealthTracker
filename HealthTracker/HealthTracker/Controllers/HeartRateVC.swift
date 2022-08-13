@@ -67,4 +67,10 @@ class HeartRateVC: UIViewController {
             Alert.showAlertControllerWith(message: "Please fill all fields", onVC: self, buttons: ["OK"], completion: nil)
         }
     }
+    
+    @IBAction func chartBtnTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let heartRateChartVC = storyboard.instantiateViewController(withIdentifier: "HeartRateChartVC") as! HeartRateChartVC
+        self.navigationController?.pushViewController(heartRateChartVC, animated: true)
+    }
 }

@@ -32,6 +32,10 @@
 		B181E31728A477F90004D33E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181E31628A477F90004D33E /* Alert.swift */; };
 		B181E31928A47DC10004D33E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B181E31828A47DC10004D33E /* GoogleService-Info.plist */; };
 		B181E31D28A548BC0004D33E /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181E31C28A548BC0004D33E /* TabbarVC.swift */; };
+		B18D703328A7FD26003E4084 /* HeartRateChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703228A7FD26003E4084 /* HeartRateChartVC.swift */; };
+		B18D703528A7FD58003E4084 /* BloodPressureChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */; };
+		B18D703728A7FD7F003E4084 /* BloodSugarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */; };
+		B18D703928A7FD9F003E4084 /* FitnessChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */; };
 		B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0728A44F3F001B66BF /* SignupVC.swift */; };
 		B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0928A450CA001B66BF /* HomeVC.swift */; };
 		B1DF3E3928A5A53600631AE1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */; };
@@ -72,6 +76,10 @@
 		B181E31628A477F90004D33E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B181E31828A47DC10004D33E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B181E31C28A548BC0004D33E /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		B18D703228A7FD26003E4084 /* HeartRateChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateChartVC.swift; sourceTree = "<group>"; };
+		B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureChartVC.swift; sourceTree = "<group>"; };
+		B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarChartVC.swift; sourceTree = "<group>"; };
+		B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessChartVC.swift; sourceTree = "<group>"; };
 		B1C69C0728A44F3F001B66BF /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B1C69C0928A450CA001B66BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -192,6 +200,10 @@
 				B1090C9E28A6EF3B00626C73 /* BloodPressureVC.swift */,
 				B1090CA028A6EF4F00626C73 /* BloodSugarVC.swift */,
 				B1090CA228A6EF6500626C73 /* FitnessVC.swift */,
+				B18D703228A7FD26003E4084 /* HeartRateChartVC.swift */,
+				B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */,
+				B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */,
+				B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,8 +383,11 @@
 				B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */,
 				B181E31D28A548BC0004D33E /* TabbarVC.swift in Sources */,
 				B1521DF928A3312D00C386E1 /* HeartRate.swift in Sources */,
+				B18D703928A7FD9F003E4084 /* FitnessChartVC.swift in Sources */,
 				B1521DFB28A3317400C386E1 /* FamilyMember.swift in Sources */,
+				B18D703328A7FD26003E4084 /* HeartRateChartVC.swift in Sources */,
 				B1521DF528A3309900C386E1 /* BloodPressure.swift in Sources */,
+				B18D703528A7FD58003E4084 /* BloodPressureChartVC.swift in Sources */,
 				B181E31128A460D90004D33E /* SigninVC.swift in Sources */,
 				B1521DE928A3298100C386E1 /* Server.swift in Sources */,
 				B181E31528A46BE30004D33E /* ErrorResponse.swift in Sources */,
@@ -381,6 +396,7 @@
 				B1090CA528A6FDB900626C73 /* Helper.swift in Sources */,
 				B1090C9D28A6EF1500626C73 /* HeartRateVC.swift in Sources */,
 				B1090CA328A6EF6500626C73 /* FitnessVC.swift in Sources */,
+				B18D703728A7FD7F003E4084 /* BloodSugarChartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
