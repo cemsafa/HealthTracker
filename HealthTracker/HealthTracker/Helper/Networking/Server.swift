@@ -23,6 +23,7 @@ public enum Server {
     case getHeartRatesSelf
     case getFitnessesSelf
     case getFamilyMembersSelf
+    case searchUser(email: String)
 }
 
 extension Server: TargetType {
@@ -66,13 +67,15 @@ extension Server: TargetType {
             return "/fitnesses/contains/self"
         case .getFamilyMembersSelf:
             return "/familymembers/contains/self"
+        case .searchUser:
+            return "/users/search"
         }
     }
 
     public var method: Moya.Method {
         switch self {
         case .getUserSelf, .getUser, .getUsers, .getBloodSugarsSelf, .getBloodPressuresSelf, .getHeartRatesSelf, .getFitnessesSelf, .getFamilyMembersSelf: return .get
-        case .login, .signup, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness: return .post
+        case .login, .signup, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness, .searchUser: return .post
         }
     }
 
@@ -135,6 +138,10 @@ extension Server: TargetType {
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .getFamilyMembersSelf:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .searchUser(let email):
+            return .requestParameters(parameters: [
+                "email": email
+            ], encoding: JSONEncoding.default)
         }
     }
 
@@ -155,7 +162,7 @@ extension Server: TargetType {
     func isAuthenticatedCall() -> Bool {
         switch self {
         case .login, .signup: return false
-        case .getUserSelf, .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness, .getBloodSugarsSelf, .getBloodPressuresSelf, .getHeartRatesSelf, .getFitnessesSelf, .getFamilyMembersSelf: return true
+        case .getUserSelf, .getUser, .getUsers, .addFamilyMember, .addBloodSugar, .addBloodPressure, .addHeartRate, .addFitness, .getBloodSugarsSelf, .getBloodPressuresSelf, .getHeartRatesSelf, .getFitnessesSelf, .getFamilyMembersSelf, .searchUser: return true
         }
     }
     

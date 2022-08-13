@@ -48,3 +48,15 @@ class AuthResponse: Mappable, Codable {
         token <- map["token"]
     }
 }
+
+class SearchUserResponse: Mappable, Codable {
+    var id: String?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        id <- map["_id"]
+    }
+}
