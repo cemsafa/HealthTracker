@@ -32,6 +32,8 @@
 		D932ECEE28A1EC450071478C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECED28A1EC450071478C /* Montserrat-Light.ttf */; };
 		D932ECF028A1EC540071478C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */; };
 		D932ECF228A1F37B0071478C /* FontSyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932ECF128A1F37B0071478C /* FontSyles.swift */; };
+		D9552E3E28A8033000EF4289 /* AddFamilyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9552E3D28A8033000EF4289 /* AddFamilyVC.swift */; };
+		D9552E4028A829FA00EF4289 /* FamilyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9552E3F28A829FA00EF4289 /* FamilyListVC.swift */; };
 		D9E2653228A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9E2653128A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		D932ECED28A1EC450071478C /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		D932ECEF28A1EC540071478C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D932ECF128A1F37B0071478C /* FontSyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSyles.swift; sourceTree = "<group>"; };
+		D9552E3D28A8033000EF4289 /* AddFamilyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyVC.swift; sourceTree = "<group>"; };
+		D9552E3F28A829FA00EF4289 /* FamilyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListVC.swift; sourceTree = "<group>"; };
 		D9E2653128A2A7EE00CFBFAB /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,8 @@
 				B1521DFC28A436E900C386E1 /* LaunchScreenVC.swift */,
 				B1C69C0728A44F3F001B66BF /* SignupVC.swift */,
 				B1C69C0928A450CA001B66BF /* HomeVC.swift */,
+				D9552E3D28A8033000EF4289 /* AddFamilyVC.swift */,
+				D9552E3F28A829FA00EF4289 /* FamilyListVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +335,8 @@
 				B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */,
 				B1521DF928A3312D00C386E1 /* HeartRate.swift in Sources */,
 				B1521DFB28A3317400C386E1 /* FamilyMember.swift in Sources */,
+				D9552E4028A829FA00EF4289 /* FamilyListVC.swift in Sources */,
+				D9552E3E28A8033000EF4289 /* AddFamilyVC.swift in Sources */,
 				B1521DF528A3309900C386E1 /* BloodPressure.swift in Sources */,
 				B1521DE928A3298100C386E1 /* Server.swift in Sources */,
 				B14D139D289D9B5400ED5CFF /* SceneDelegate.swift in Sources */,
