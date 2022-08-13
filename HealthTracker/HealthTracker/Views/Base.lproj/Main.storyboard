@@ -973,6 +973,7 @@
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="saveBtnTapped:" destination="ue3-jM-daL" eventType="touchUpInside" id="YZs-5o-BH9"/>
                                                     <action selector="signupBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htR-nV-e6F"/>
                                                 </connections>
                                             </button>
@@ -1041,6 +1042,13 @@
                     <navigationItem key="navigationItem" title="BLOOD PRESSURE" id="tp2-j7-D07">
                         <barButtonItem key="rightBarButtonItem" image="ic-chart" id="OJX-gv-M96"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLbl" destination="1ql-eW-2LR" id="wvy-DJ-1dW"/>
+                        <outlet property="diaLbl" destination="NjH-dv-aWJ" id="wrc-kw-oUQ"/>
+                        <outlet property="diaTF" destination="9ko-EV-qoF" id="KxS-vO-tN0"/>
+                        <outlet property="sysLbl" destination="c5y-XV-VcL" id="lqd-Cw-RDq"/>
+                        <outlet property="sysTF" destination="w2e-Zj-lhC" id="vv4-Nb-cgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLW-4i-FX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

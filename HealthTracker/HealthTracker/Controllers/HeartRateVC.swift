@@ -64,7 +64,7 @@ class HeartRateVC: UIViewController {
                 }
             }
         } else {
-            Alert.showAlertControllerWith(message: "Please fill bpm field", onVC: self, buttons: ["OK"], completion: nil)
+            Alert.showAlertControllerWith(message: "Please fill all fields", onVC: self, buttons: ["OK"], completion: nil)
         }
     }
 }
