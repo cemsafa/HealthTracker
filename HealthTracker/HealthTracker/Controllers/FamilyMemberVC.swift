@@ -128,5 +128,10 @@ extension FamilyMemberVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let chatVC = storyboard.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+        chatVC.otherUserId = members[indexPath.row].id
+        chatVC.otherUserName = members[indexPath.row].name
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
 }
