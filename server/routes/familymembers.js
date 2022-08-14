@@ -44,8 +44,12 @@ router.post(
   [auth, trial, premium, validator(validate)],
   async (req, res) => {
     const fMember = await lookup(req.body.userId, req.body.memberId);
-    if (fMember)
-      return res.status(404).send({ message: "You already have this member." });
+    const exists = await FamilyMember.find({
+      userId: req.body.userId,
+      memberId: req.body.memberId,
+    });
+    if (exists.length !== 0)
+      return res.status(400).send({ message: "You already have this member." });
 
     const member = await User.findById(req.body.memberId);
     if (!member) return res.status(400).send({ message: "Invalid member." });
@@ -71,6 +75,7 @@ router.post(
           { _id: user._id },
           { $push: { familymembers: familymember } }
         )
+        .save("familymembers", otherUserMember)
         .update(
           "users",
           { _id: member._id },

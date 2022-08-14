@@ -36,6 +36,7 @@
 		B18D703528A7FD58003E4084 /* BloodPressureChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */; };
 		B18D703728A7FD7F003E4084 /* BloodSugarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */; };
 		B18D703928A7FD9F003E4084 /* FitnessChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */; };
+		B18D703D28A84051003E4084 /* FamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D703C28A84051003E4084 /* FamilyMemberVC.swift */; };
 		B1C69C0828A44F3F001B66BF /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0728A44F3F001B66BF /* SignupVC.swift */; };
 		B1C69C0A28A450CA001B66BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69C0928A450CA001B66BF /* HomeVC.swift */; };
 		B1DF3E3928A5A53600631AE1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */; };
@@ -80,6 +81,7 @@
 		B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureChartVC.swift; sourceTree = "<group>"; };
 		B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarChartVC.swift; sourceTree = "<group>"; };
 		B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessChartVC.swift; sourceTree = "<group>"; };
+		B18D703C28A84051003E4084 /* FamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberVC.swift; sourceTree = "<group>"; };
 		B1C69C0728A44F3F001B66BF /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B1C69C0928A450CA001B66BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B1DF3E3828A5A53600631AE1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				B18D703428A7FD58003E4084 /* BloodPressureChartVC.swift */,
 				B18D703628A7FD7F003E4084 /* BloodSugarChartVC.swift */,
 				B18D703828A7FD9F003E4084 /* FitnessChartVC.swift */,
+				B18D703C28A84051003E4084 /* FamilyMemberVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				B1090CA528A6FDB900626C73 /* Helper.swift in Sources */,
 				B1090C9D28A6EF1500626C73 /* HeartRateVC.swift in Sources */,
 				B1090CA328A6EF6500626C73 /* FitnessVC.swift in Sources */,
+				B18D703D28A84051003E4084 /* FamilyMemberVC.swift in Sources */,
 				B18D703728A7FD7F003E4084 /* BloodSugarChartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

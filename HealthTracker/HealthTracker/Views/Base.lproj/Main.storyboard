@@ -1831,14 +1831,46 @@
         <!--FAMILY MEMBERS-->
         <scene sceneID="dg0-HB-KwK">
             <objects>
-                <viewController id="2du-XA-5vQ" sceneMemberID="viewController">
+                <viewController id="2du-XA-5vQ" customClass="FamilyMemberVC" customModule="HealthTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JG7-P1-6gd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-pl-Avr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="familyMemberCell" id="0ss-zA-kjn">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ss-zA-kjn" id="rd4-av-kUf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eb8-3T-Pbf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJ0-pl-Avr" firstAttribute="top" secondItem="eb8-3T-Pbf" secondAttribute="top" id="95I-U0-zJH"/>
+                            <constraint firstItem="eb8-3T-Pbf" firstAttribute="trailing" secondItem="ZJ0-pl-Avr" secondAttribute="trailing" id="JzT-jF-gJj"/>
+                            <constraint firstItem="eb8-3T-Pbf" firstAttribute="bottom" secondItem="ZJ0-pl-Avr" secondAttribute="bottom" id="VJx-nc-H46"/>
+                            <constraint firstItem="ZJ0-pl-Avr" firstAttribute="leading" secondItem="eb8-3T-Pbf" secondAttribute="leading" id="cb5-kG-MDh"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FAMILY MEMBERS" id="IWl-kd-iNd"/>
+                    <navigationItem key="navigationItem" title="FAMILY MEMBERS" id="IWl-kd-iNd">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="qZd-pi-taU">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addBtnTapped:" destination="2du-XA-5vQ" id="LB1-Og-ThY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="familyTableView" destination="ZJ0-pl-Avr" id="lz9-xe-eeX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuJ-3Z-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2198,6 +2230,7 @@
         <image name="ic-profile" width="25" height="25"/>
         <image name="logo-dev-team" width="40" height="38.5"/>
         <image name="logo-healthtracker" width="183" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="purple-background" width="810" height="810"/>
         <namedColor name="AccentColor">
             <color red="0.68599998950958252" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
