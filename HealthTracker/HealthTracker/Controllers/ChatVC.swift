@@ -62,7 +62,7 @@ class ChatVC: MessagesViewController {
     }
     
     func loadChat() {
-        let db = Firestore.firestore().collection("Chats").whereField("users", arrayContains: currentUser.id ?? "First user not found.")
+        let db = Firestore.firestore().collection("Chats").whereField("users", arrayContains: otherUserId!)
         db.getDocuments { snapshot, error in
             if let error = error {
                 Alert.showAlertControllerWith(title: "Error", message: "\(error)", onVC: self, style: .alert, buttons: ["OK"]) { success, index in
@@ -157,7 +157,7 @@ extension ChatVC: InputBarAccessoryViewDelegate {
 
 extension ChatVC: MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
     func currentSender() -> SenderType {
-        return Sender(senderId: currentUser.id!, displayName: currentUser.name!)
+        return ChatUser(senderId: currentUser.id!, displayName: currentUser.name!)
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -165,12 +165,7 @@ extension ChatVC: MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDel
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        if messages.count == 0 {
-            Alert.showAlertControllerWith(message: "No messages to display", onVC: self, buttons: ["OK"], completion: nil)
-            return 0
-        } else {
-            return messages.count
-        }
+        return messages.count
     }
     
     func backgroundColor(for message: MessageType, at indexpath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {

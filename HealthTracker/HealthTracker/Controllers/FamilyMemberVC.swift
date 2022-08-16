@@ -15,11 +15,16 @@ class FamilyMemberVC: UIViewController {
     
     var members = [User]()
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         familyTableView.delegate = self
         familyTableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(fetchRefresh), for: .valueChanged)
+        familyTableView.refreshControl = refreshControl
         
         fetchRefresh()
     }
@@ -29,7 +34,7 @@ class FamilyMemberVC: UIViewController {
         fetchRefresh()
     }
     
-    func fetchRefresh() {
+    @objc func fetchRefresh() {
         APIManager.providerNoLog.request(.getFamilyMembersSelf) { result in
             switch result {
             case .success(let response):
@@ -41,6 +46,7 @@ class FamilyMemberVC: UIViewController {
                                 if let json = try? response.mapJSON(), let member = Mapper<User>().map(JSON: json as! [String: Any]) {
                                     if self.members.contains(where: { $0.id == member.id}) {
                                         self.familyTableView.reloadData()
+                                        self.refreshControl.endRefreshing()
                                     } else {
                                         self.members.append(member)
                                     }
